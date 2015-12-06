@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6DE843A6-69EE-4202-906F-4A1680274311}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CGSpecFlowBVT</RootNamespace>
+    <AssemblyName>CGSpecFlowBVT</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=2.45.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Selenium.WebDriver.2.45.0\lib\net40\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=2.45.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Selenium.Support.2.45.0\lib\net40\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Data Objects\ChangeData.cs" />
+    <Compile Include="Data Objects\FlexData.cs" />
+    <Compile Include="Data Objects\IncidentData.cs" />
+    <Compile Include="Data Objects\ModuleData.cs" />
+    <Compile Include="Data Objects\ProblemData.cs" />
+    <Compile Include="Data Objects\ServiceRequestData.cs" />
+    <Compile Include="Feature Files\Change.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Change.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Feature Files\Flex.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Flex.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Feature Files\Incident.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Incident.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Feature Files\Login.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Login.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Feature Files\Navigation.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Navigation.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Feature Files\Problem.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Problem.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Feature Files\ServiceRequest.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiceRequest.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Feature Files\URLinterface.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>URLinterface.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Feature Files\Views.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Views.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Hooks1.cs" />
+    <Compile Include="Page Object Parts\ModuleActionBar.cs" />
+    <Compile Include="Page Object Parts\NavBar.cs" />
+    <Compile Include="Page Object Parts\TicketActionBar.cs" />
+    <Compile Include="Page Object Parts\TicketGrid.cs" />
+    <Compile Include="Page Object Parts\UserSettings.cs" />
+    <Compile Include="Page Object Parts\ViewsPanel.cs" />
+    <Compile Include="Page Objects\AnnouncementManagerPage.cs" />
+    <Compile Include="Page Objects\AnnouncementPage.cs" />
+    <Compile Include="Page Objects\AnnouncementPortalPage.cs" />
+    <Compile Include="Page Objects\ChangeModulePage.cs" />
+    <Compile Include="Page Objects\ChangePage.cs" />
+    <Compile Include="Page Objects\ChangeTaskPage.cs" />
+    <Compile Include="Page Objects\CIPage.cs" />
+    <Compile Include="Page Objects\CMDBModulePage.cs" />
+    <Compile Include="Page Objects\FlexModulePage.cs" />
+    <Compile Include="Page Objects\FlexPage.cs" />
+    <Compile Include="Page Objects\GeneralPage.cs" />
+    <Compile Include="Page Objects\IncidentModulePage.cs" />
+    <Compile Include="Page Objects\IncidentPage.cs" />
+    <Compile Include="Page Objects\IncidentTaskPage.cs" />
+    <Compile Include="Page Objects\KBModulePage.cs" />
+    <Compile Include="Page Objects\KBPage.cs" />
+    <Compile Include="Page Objects\LoginPage.cs" />
+    <Compile Include="Page Objects\ProblemModulePage.cs" />
+    <Compile Include="Page Objects\ProblemPage.cs" />
+    <Compile Include="Page Objects\ReportsModulePage.cs" />
+    <Compile Include="Page Objects\ReportsPage.cs" />
+    <Compile Include="Page Objects\ServiceCatalogPage.cs" />
+    <Compile Include="Page Objects\ServiceRequestModulePage.cs" />
+    <Compile Include="Page Objects\ServiceRequestPage.cs" />
+    <Compile Include="Page Objects\SSPPage.cs" />
+    <Compile Include="Page Objects\SurveyModulePage.cs" />
+    <Compile Include="Page Objects\SurveyPage.cs" />
+    <Compile Include="Page Objects\TaskManagerPage.cs" />
+    <Compile Include="Page Objects\TemplateManagerPage.cs" />
+    <Compile Include="Page Objects\TicketPage.cs" />
+    <Compile Include="Page Objects\UserCenterPage.cs" />
+    <Compile Include="PageIDs\ActionBarIDs.cs" />
+    <Compile Include="PageIDs\AnnouncementIDs.cs" />
+    <Compile Include="PageIDs\ChangeIDs.cs" />
+    <Compile Include="PageIDs\CMDBIDs.cs" />
+    <Compile Include="PageIDs\FlexIDs.cs" />
+    <Compile Include="PageIDs\GeneralPageIDs.cs" />
+    <Compile Include="PageIDs\IncidentIDs.cs" />
+    <Compile Include="PageIDs\KBIDs.cs" />
+    <Compile Include="PageIDs\LoginIDs.cs" />
+    <Compile Include="PageIDs\moduleURLs.cs" />
+    <Compile Include="PageIDs\ProblemIDs.cs" />
+    <Compile Include="PageIDs\ReportIDs.cs" />
+    <Compile Include="PageIDs\ServiceCatalogIDs.cs" />
+    <Compile Include="PageIDs\ServiceRequestIDs.cs" />
+    <Compile Include="PageIDs\SSPIDs.cs" />
+    <Compile Include="PageIDs\SurveyIDs.cs" />
+    <Compile Include="PageIDs\TaskManagerIDs.cs" />
+    <Compile Include="PageIDs\TemplateManagerIDs.cs" />
+    <Compile Include="PageIDs\TicketActionBarIDs.cs" />
+    <Compile Include="PageIDs\TicketGridIDs.cs" />
+    <Compile Include="PageIDs\UserCenterIDs.cs" />
+    <Compile Include="PageIDs\ViewsPanelIDs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Step Definitions\LoginSteps.cs" />
+    <Compile Include="Step Definitions\ModuleSteps.cs" />
+    <Compile Include="Step Definitions\NavigationSteps.cs" />
+    <Compile Include="Step Definitions\ProblemSteps.cs" />
+    <Compile Include="Step Definitions\URLinterfaceSteps.cs" />
+    <Compile Include="Step Definitions\ViewSteps.cs" />
+    <Compile Include="Utility\CreateTicketSwitch.cs" />
+    <Compile Include="Utility\ModuleDataSwitch.cs" />
+    <Compile Include="Utility\Switches.cs" />
+    <Compile Include="Utility\VerifyFieldValuesSwitch.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Feature Files\Change.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Change.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Feature Files\Flex.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Flex.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Feature Files\Incident.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Incident.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Feature Files\Login.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Login.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Feature Files\Navigation.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Navigation.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Feature Files\Problem.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Problem.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Feature Files\ServiceRequest.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ServiceRequest.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Feature Files\URLinterface.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>URLinterface.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Feature Files\Views.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Views.feature.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
